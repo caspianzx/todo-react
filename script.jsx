@@ -48,7 +48,7 @@ class List extends React.Component {
           <button onClick={()=>{this.addItem()}}>add item</button>
           <button onClick={()=>{this.clearList()}}>clear item list</button>
           <h2>To do list </h2>
-          {this.state.list.join(" ")}
+          <ul>{this.state.list.map( items =>  {return <li> {items} </li>})}</ul>
         </div>
       );
   }
